@@ -355,7 +355,7 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add "images/low-fidelity/main_menu_screen.png"
+    add "images/low_fidelity/main_menu_screen.png"
 
     ## This empty frame darkens the main menu.
     frame:
