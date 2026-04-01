@@ -33,12 +33,12 @@
     #return
 
 #SCENE 1 
-e = Character("control", color="pink")
+define e = Character("control", color="pink")
 image chat_panel = "images/low-fidelity/chat_panel_placeholder.jpg"
 label start:
 
     #Showing desktop background of CLEAR
-    scene bg "images/low-fidelity/main_homescreen.jpg" with fade
+    scene bg "images/low_fidelity/main_homescreen.jpg" with fade
 
      # Cutscene narration - player just reads/watches
     "The screen flickers to life."
