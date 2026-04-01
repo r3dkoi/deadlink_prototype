@@ -39,7 +39,7 @@ image bg background_alley = "images/low_fidelity/background_alley.jpg"
 image bg end_shift_screen = "images/low_fidelity/end_shift_screen.jpg"
 image bg destroy_keep_evidence = "images/low_fidelity/destroy_keep_evidence.jpg"
 image bg coworkers_icons = "images/low_fidelity/coworkers_icons.jpg"
-image chat_panel = "images/low_fidelity/chat_panel_placeholder.jpg"
+image control_icon = "images/low_fidelity/control_icon.jpg"
 
 #Image scaling definitions 
 transform fit_screen:
@@ -50,9 +50,9 @@ transform fit_screen:
     fit "cover"
 
 transform chat_panel_position:
-    xalign 0.98        # pushes to the right
-    yalign 0.15        # sits near the top
-    zoom 0.4           # scales it down to 40% of original size
+    xalign 0.99        # pushes to the right
+    yalign 0.05        # sits near the top
+    zoom 0.10           # scales it down to 40% of original size
 
 #SCENE 1 
 define control = Character("CONTROL", color="#00FF00")
@@ -69,7 +69,7 @@ label start:
     pause 1.5
 
     # Chat panel appears (you'll add the image/overlay later)
-    show chat_panel at right with dissolve
+    show control_icon at chat_panel_position with dissolve
 
     control "Welcome Intern."
     control "Let's see how well you go."
