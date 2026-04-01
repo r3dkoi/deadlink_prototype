@@ -41,14 +41,18 @@ image bg destroy_keep_evidence = "images/low_fidelity/destroy_keep_evidence.jpg"
 image bg coworkers_icons = "images/low_fidelity/coworkers_icons.jpg"
 image chat_panel = "images/low_fidelity/chat_panel_placeholder.jpg"
 
+#Forcing images to scale to screen
+transform fit_screen:
+    xysize (1280, 720)
+    fit "cover"
 
 #SCENE 1 
-define e = Character("control", color="pink")
+define control = Character("CONTROL", color="#00FF00")
 label start:
 
     #Showing desktop background of CLEAR
-    scene bg main_homescreen with fade
-
+    scene bg main_homescreen at fit_screen with fade
+    
      # Cutscene narration - player just reads/watches
     "The screen flickers to life."
     "This is your first day."
