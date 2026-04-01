@@ -205,3 +205,11 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Ren'Py generated files
+game/cache/
+game/saves/
+*.rpyc
+*.rpymc
+log.txt
+traceback.txt
