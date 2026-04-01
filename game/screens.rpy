@@ -299,17 +299,17 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _("[ START ]") action Start()
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("[ HISTORY ]") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("[ SAVE ] ") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("[ CONTINUE ]") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("[ OPTIONS ]") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -355,7 +355,7 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add images/
+    add "images/low-fidelity/main_menu_screen.png"
 
     ## This empty frame darkens the main menu.
     frame:
