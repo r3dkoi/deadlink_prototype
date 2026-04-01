@@ -52,7 +52,7 @@ transform fit_screen:
 transform chat_panel_position:
     xalign 0.99        # pushes to the right
     yalign 0.05        # sits near the top
-    zoom 0.10           # scales it down to 40% of original size
+    zoom 0.5           # scales it down to 40% of original size
 
 #SCENE 1 
 define control = Character("CONTROL", color="#00FF00")
@@ -75,3 +75,4 @@ label start:
     control "Let's see how well you go."
 
     return
+
