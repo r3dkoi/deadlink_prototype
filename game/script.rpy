@@ -41,13 +41,18 @@ image bg destroy_keep_evidence = "images/low_fidelity/destroy_keep_evidence.jpg"
 image bg coworkers_icons = "images/low_fidelity/coworkers_icons.jpg"
 image chat_panel = "images/low_fidelity/chat_panel_placeholder.jpg"
 
-#Forcing images to scale to screen
+#Image scaling definitions 
 transform fit_screen:
     xalign 0.5
     yalign 0.5
     xsize config.screen_width
     ysize config.screen_height
     fit "cover"
+
+transform chat_panel_position:
+    xalign 0.98        # pushes to the right
+    yalign 0.15        # sits near the top
+    zoom 0.4           # scales it down to 40% of original size
 
 #SCENE 1 
 define control = Character("CONTROL", color="#00FF00")
