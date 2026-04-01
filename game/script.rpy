@@ -32,13 +32,22 @@
 
     #return
 
+#Image definitions
+image bg main_homescreen = "images/low_fidelity/main_homescreen.jpg"
+image bg main_menu_screen = "images/low_fidelity/main_menu_screen.png"
+image bg background_alley = "images/low_fidelity/background_alley.jpg"
+image bg end_shift_screen = "images/low_fidelity/end_shift_screen.jpg"
+image bg destroy_keep_evidence = "images/low_fidelity/destroy_keep_evidence.jpg"
+image bg coworkers_icons = "images/low_fidelity/coworkers_icons.jpg"
+image chat_panel = "images/low_fidelity/chat_panel_placeholder.jpg"
+
+
 #SCENE 1 
 define e = Character("control", color="pink")
-image chat_panel = "images/low-fidelity/chat_panel_placeholder.jpg"
 label start:
 
     #Showing desktop background of CLEAR
-    scene bg "images/low_fidelity/main_homescreen.jpg" with fade
+    scene bg main_homescreen with fade
 
      # Cutscene narration - player just reads/watches
     "The screen flickers to life."
