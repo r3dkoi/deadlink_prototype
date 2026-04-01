@@ -43,7 +43,10 @@ image chat_panel = "images/low_fidelity/chat_panel_placeholder.jpg"
 
 #Forcing images to scale to screen
 transform fit_screen:
-    xysize (1280, 720)
+    xalign 0.5
+    yalign 0.5
+    xsize config.screen_width
+    ysize config.screen_height
     fit "cover"
 
 #SCENE 1 
