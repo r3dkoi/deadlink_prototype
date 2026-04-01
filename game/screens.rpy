@@ -299,17 +299,17 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("[ START ]") action Start()
+            textbutton _("[[ START ]]") action Start()
 
         else:
 
-            textbutton _("[ HISTORY ]") action ShowMenu("history")
+            textbutton _("[[ HISTORY ]]") action ShowMenu("history")
 
-            textbutton _("[ SAVE ] ") action ShowMenu("save")
+            textbutton _("[[ SAVE ]]") action ShowMenu("save")
 
-        textbutton _("[ CONTINUE ]") action ShowMenu("load")
+        textbutton _("[[ CONTINUE ]]") action ShowMenu("load")
 
-        textbutton _("[ OPTIONS ]") action ShowMenu("preferences")
+        textbutton _("[[ OPTIONS ]]") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -330,7 +330,7 @@ screen navigation():
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("[ QUIT ]") action Quit(confirm=not main_menu)
+            textbutton _("[[ QUIT ]]") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
