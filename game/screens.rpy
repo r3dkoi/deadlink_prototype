@@ -354,8 +354,6 @@ screen main_menu():
     ## This empty frame darkens the main menu.
     frame:
         style "main_menu_frame"
-        xalign 0.5 #Centred horizontally
-        yalign 1.0 #Pushed to bottom of screen
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
@@ -380,15 +378,16 @@ style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
 style main_menu_frame:
-    xsize 420
-    yfill True
+    xfill True #Stretch full screen width
+    ysize 200 #Fixed bar height
+    yalign 1.0 #Anchors to bottom
 
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
-    xalign 1.0
-    xoffset -30
-    xmaximum 1200
+    xalign 0.5 #Centres title/version text horizontally
+    xoffset 0 #Removes old right-side offset
+    xmaximum 1920 #Full width allowance
     yalign 1.0
     yoffset -30
 
