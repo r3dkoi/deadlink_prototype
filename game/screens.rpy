@@ -354,6 +354,8 @@ screen main_menu():
     ## This empty frame darkens the main menu.
     frame:
         style "main_menu_frame"
+        xalign 0.5 #Centred horizontally
+        yalign 1.0 #Pushed to bottom of screen
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
