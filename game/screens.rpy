@@ -381,8 +381,10 @@ style main_menu_frame:
     xfill True #Stretch full screen width
     ysize 200 #Fixed bar height
     yalign 1.0 #Anchors to bottom
+    xalign 0.5 #centre horizontally
+    background  "#000000cc"  # semi-transparent black replaces the png
 
-    background "gui/overlay/main_menu.png"
+    #background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 0.5 #Centres title/version text horizontally
