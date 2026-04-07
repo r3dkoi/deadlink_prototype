@@ -289,50 +289,44 @@ style quick_button_text:
 
 screen navigation():
 
-    vbox:
-        style_prefix "navigation"
+    #hbox = horizontal layout
+    hbox:
+        style_prefix "navigation" #Keeps connection to navi button styles below
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        #Centre buttons horizontally, sits near bottom of screen
+        xalign 0.5
+        yalign 0.95
 
-        spacing gui.navigation_spacing
+        #Spacing between each button
+        spacing 40
 
+        #Show START on main menu, or HISTORY/SAVE when in-game
         if main_menu:
-
-            textbutton _("[[ START ]") action Start()
-
+            textbutton _("|| START ||") action Start()
         else:
+            textbutton _("|| HISTORY ||") action ShowMenu("history")
+            textbutton _("|| SAVE ||") action ShowMenu("save")
 
-            textbutton _("[[ HISTORY ]") action ShowMenu("history")
+        #Always visible buttons
+        textbutton _("|| CONTINUE ||") action ShowMenu("load")
+        textbutton _("|| OPTIONS ||") action ShowMenu("preferences")
 
-            textbutton _("[[ SAVE ]") action ShowMenu("save")
-
-        textbutton _("[[ CONTINUE ]") action ShowMenu("load")
-
-        textbutton _("[[ OPTIONS ]") action ShowMenu("preferences")
-
+        # Replay controls - only shown during a replay
         if _in_replay:
-
-            textbutton _("End Replay") action EndReplay(confirm=True)
-
+            textbutton _("[[ END REPLAY ]]") action EndReplay(confirm=True)
         elif not main_menu:
+            textbutton _("[[ MAIN MENU ]]") action MainMenu()
+        
+        # About and Help hidden intentionally
+            # textbutton _("About") action ShowMenu("about")
+            # textbutton _("Help") action ShowMenu("help")
 
-            textbutton _("Main Menu") action MainMenu()
-
-        #textbutton _("About") action ShowMenu("about")
-
-        #if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-        #    textbutton _("Help") action ShowMenu("help")
-
-        if renpy.variant("pc"):
-
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            textbutton _("[[ QUIT ]") action Quit(confirm=not main_menu)
+            # Quit only shown on PC (banned on iOS, unnecessary on Android/Web)
+            if renpy.variant("pc"):
+                textbutton _("|| QUIT ||") action Quit(confirm=not main_menu)
 
 
+#Navigation button styles - controls sizing and font for all nav buttons
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
 
