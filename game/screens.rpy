@@ -296,7 +296,7 @@ screen navigation():
         #Centre buttons horizontally, sits near bottom of screen
         xalign 0.5
         yalign 0.95
-        spacing 80 #Spacing between each button
+        spacing 40 #Spacing between each button
 
         #Show START only on main menu only
         if main_menu:
@@ -330,11 +330,13 @@ style navigation_button is gui_button
 style navigation_button_text is gui_button_text
 
 style navigation_button:
-    size_group "navigation"
+    #size_group "navigation" #Removed to manually resize button borders
     properties gui.button_properties("navigation_button")
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+    size 32 
+    xalign 0.5 #Testing centring of text within each button
 
 
 ## Main Menu screen ############################################################
