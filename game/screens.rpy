@@ -387,20 +387,24 @@ style main_menu_frame:
     #background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
-    xalign 0.5 #Centres title/version text horizontally
-    xoffset 0 #Removes old right-side offset
-    xmaximum 1920 #Full width allowance
-    yalign 1.0
-    yoffset -30
+    xalign 1.0 #Pushes to the far right
+    xoffset -40 #Padding from right edge
+    xmaximum 600 #Limit text width
+    yalign 1.0  #Anchors to bottom
+    yoffset -10 #Small padding from bottom edge
+
+
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
 
 style main_menu_title:
     properties gui.text_properties("title")
+    size 28 #Testing small title size
 
 style main_menu_version:
     properties gui.text_properties("version")
+    size 16 #Testing small title size
 
 
 ## Game Menu screen ############################################################
