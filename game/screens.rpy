@@ -298,19 +298,24 @@ screen navigation():
         yalign 0.95
         spacing 80 #Spacing between each button
 
-        #Main menu buttons always visible
-        if main_menu
+        #Show START only on main menu only
+        if main_menu:
             textbutton _("|| START ||") action Start()
+
+        #Always visible buttons
         textbutton _("|| CONTINUE ||") action ShowMenu("load")
         textbutton _("|| OPTIONS ||") action ShowMenu("preferences")
-        if renpy.variant("pc)"):
+
+        #Quit only available on PC
+        if renpy.variant("pc"):
             textbutton _("|| QUIT ||") action Quit(confirm=not main_menu)
 
-        #In-game only buttons at the end
+        #In-game only buttons
         if not main_menu:
             textbutton _("|| HISTORY ||") action ShowMenu("history")
             textbutton _("|| SAVE ||") action ShowMenu("save")
             textbutton _("|| RETURN TO MAIN MENU ||") action MainMenu()
+
         # Replay controls - only shown during a replay
         if _in_replay:
             textbutton _("[[ END REPLAY ]]") action EndReplay(confirm=True)
@@ -318,10 +323,6 @@ screen navigation():
         # About and Help hidden intentionally
             # textbutton _("About") action ShowMenu("about")
             # textbutton _("Help") action ShowMenu("help")
-
-            # Quit only shown on PC (banned on iOS, unnecessary on Android/Web)
-            if renpy.variant("pc"):
-                textbutton _("|| QUIT ||") action Quit(confirm=not main_menu)
 
 
 #Navigation button styles - controls sizing and font for all nav buttons
