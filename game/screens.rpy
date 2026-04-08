@@ -382,7 +382,7 @@ style main_menu_frame:
     ysize 200 #Fixed bar height
     yalign 1.0 #Anchors to bottom
     xalign 0.5 #centre horizontally
-    background  "#000000cc"  # semi-transparent black replaces the png
+    background  "#000000"  # semi-transparent black replaces the png
 
     #background "gui/overlay/main_menu.png"
 
