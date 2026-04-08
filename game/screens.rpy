@@ -296,26 +296,24 @@ screen navigation():
         #Centre buttons horizontally, sits near bottom of screen
         xalign 0.5
         yalign 0.95
+        spacing 80 #Spacing between each button
 
-        #Spacing between each button
-        spacing 40
-
-        #Show START on main menu, or HISTORY/SAVE when in-game
-        if main_menu:
+        #Main menu buttons always visible
+        if main_menu
             textbutton _("|| START ||") action Start()
-        else:
-            textbutton _("|| HISTORY ||") action ShowMenu("history")
-            textbutton _("|| SAVE ||") action ShowMenu("save")
-
-        #Always visible buttons
         textbutton _("|| CONTINUE ||") action ShowMenu("load")
         textbutton _("|| OPTIONS ||") action ShowMenu("preferences")
+        if renpy.variant("pc)"):
+            textbutton _("|| QUIT ||") action Quit(confirm=not main_menu)
 
+        #In-game only buttons at the end
+        if not main_menu:
+            textbutton _("|| HISTORY ||") action ShowMenu("history")
+            textbutton _("|| SAVE ||") action ShowMenu("save")
+            textbutton _("|| RETURN TO MAIN MENU ||") action MainMenu()
         # Replay controls - only shown during a replay
         if _in_replay:
             textbutton _("[[ END REPLAY ]]") action EndReplay(confirm=True)
-        elif not main_menu:
-            textbutton _("[[ MAIN MENU ]]") action MainMenu()
         
         # About and Help hidden intentionally
             # textbutton _("About") action ShowMenu("about")
@@ -392,7 +390,6 @@ style main_menu_vbox:
     xmaximum 600 #Limit text width
     yalign 1.0  #Anchors to bottom
     yoffset -10 #Small padding from bottom edge
-
 
 
 style main_menu_text:
