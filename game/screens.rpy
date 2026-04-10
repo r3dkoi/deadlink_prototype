@@ -99,6 +99,7 @@ screen say(who, what):
 
     window:
         id "window"
+        background Image("images/Iteration_1/chatbox_1.png")
 
         if who is not None:
 
@@ -335,7 +336,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
-    size 32 
+    size 48
     xalign 0.5 #Testing centring of text within each button
 
 
