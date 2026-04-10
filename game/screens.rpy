@@ -360,9 +360,9 @@ screen main_menu():
     tag menu
 
     add Movie(
-        play="images/"DEADLINK_Homepage_video.mp4",
+        play="images/Iteration_1/DEADLINK_Homepage_video.webm",
         loop=True,
-        size=1920, 1080
+        size=(1920, 1080)
     )
 
     ## This empty frame darkens the main menu.
