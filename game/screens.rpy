@@ -359,7 +359,7 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add "images/Iteration_1/DEADLINK_Homepage.png"
+    add "images/Iteration_1/deadlink_homepage_2.gif"
 
     ## This empty frame darkens the main menu.
     frame:
