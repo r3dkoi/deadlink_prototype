@@ -360,7 +360,7 @@ screen main_menu():
     tag menu
 
     add Movie(
-        play="images/Iteration_1/DEADLINK_Homepage_video.webm",
+        play="images/Iteration_1/DEADLINK_Homepage_video_2.webm",
         loop=True,
         size=(1920, 1080)
     )
