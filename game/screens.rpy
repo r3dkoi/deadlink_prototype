@@ -99,7 +99,7 @@ screen say(who, what):
 
     window:
         id "window"
-        background Image("images/Iteration_1/chatbox_1.png")
+        background Frame("images/Iteration_1/chatbox_1.png", 80, 0)
 
         if who is not None:
 
