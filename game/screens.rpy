@@ -241,26 +241,28 @@ screen quick_menu():
     ## Ensure this appears on top of other screens.
     zorder 100
 
-    frame:
-        xalign 0.5        ## centres it horizontally
-        yalign 1.0        ## pins it to the bottom
-        xsize 1.0         ## full width
-        background Frame(Solid("#00000099"))  ## black at ~60% opacity
-
     if quick_menu:
+        frame:
+            xalign 0.5
+            yalign 1.0
+            xsize 1.0
+            ysize 33 #Shrinking to just height of button text
+            background Solid("#00000099")  ## just Solid(), not Frame(Solid())
 
-        hbox:
-            style_prefix "quick"
-            style "quick_menu"
+            hbox:
+                style_prefix "quick"
+                style "quick_menu"
+                xalign 0.5    ## centre the buttons inside the frame
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+                textbutton _("Back") action Rollback()
+                textbutton _("History") action ShowMenu('history')
+                textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+                textbutton _("Auto") action Preference("auto-forward", "toggle")
+                textbutton _("Save") action ShowMenu('save')
+                textbutton _("Q.Save") action QuickSave()
+                textbutton _("Q.Load") action QuickLoad()
+                textbutton _("Prefs") action ShowMenu('preferences')
+  
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
