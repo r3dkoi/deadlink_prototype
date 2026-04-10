@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 36: expected statement.
-    e = Character("control", color="pink")
-      ^
+File "game/screens.rpy", line 362: '(' was never closed
+    add Movie(
+             ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Wed Apr  1 22:27:23 2026
+Fri Apr 10 18:24:45 2026
