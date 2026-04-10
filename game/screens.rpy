@@ -241,6 +241,12 @@ screen quick_menu():
     ## Ensure this appears on top of other screens.
     zorder 100
 
+    frame:
+        xalign 0.5        ## centres it horizontally
+        yalign 1.0        ## pins it to the bottom
+        xsize 1.0         ## full width
+        background Frame(Solid("#00000099"))  ## black at ~60% opacity
+
     if quick_menu:
 
         hbox:
