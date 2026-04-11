@@ -58,8 +58,12 @@ transform player_icon_position:
     zoom 0.5
 
 
+#CHARACTER DEFINITIONS
+define control = Character("CONTROL", color="#00FF00")
+define player = DynamicCharacter("player_name", color="#343568")
 
-#PLAYER NAME
+
+#Default Character Name
 default player_name = "" ## 'default' ensures the variable exists even if the game is loaded from a save
 
 
@@ -91,8 +95,6 @@ label start:
 
 
 #SCENE 2
-define control = Character("CONTROL", color="#00FF00")
-define player = 
 label scene_two:
 
     #Showing desktop background of CLEAR
