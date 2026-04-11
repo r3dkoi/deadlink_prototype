@@ -50,11 +50,11 @@ transform fit_screen:
 transform chat_panel_position:
     xalign 0.99        # pushes to the right
     yalign 0.05        # sits near the top
-    zoom 0.35           # scales it down to 40% of original size
+    zoom 0.55           # scales it down to 40% of original size
 
 transform player_icon_position:
     xalign 0.01 #far left 
-    yalign 0.85 #near bottom 
+    yalign 0.72 #near bottom 
     zoom 0.35
 
 
