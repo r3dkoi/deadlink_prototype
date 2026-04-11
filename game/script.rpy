@@ -46,10 +46,18 @@ transform fit_screen:
     ysize config.screen_height
     fit "cover"
 
+#icon positions
 transform chat_panel_position:
     xalign 0.99        # pushes to the right
     yalign 0.05        # sits near the top
     zoom 0.5           # scales it down to 40% of original size
+
+transform player_icon_position:
+    xalign 0.01 #far left 
+    yalign 0.85 #near bottom 
+    zoom 0.5
+
+
 
 #PLAYER NAME
 default player_name = "" ## 'default' ensures the variable exists even if the game is loaded from a save
@@ -81,24 +89,23 @@ label start:
     scene black #Sets background just to black for scene 1
     call screen name_input_screen() 
 
-#SCENE 2
-label scene_two
-
-
-
-
 
 #SCENE 2
 define control = Character("CONTROL", color="#00FF00")
 define player = 
-label start:
+label scene_two:
 
     #Showing desktop background of CLEAR
-    scene bg main_homescreen at fit_screen with fade
+    scene welcome_back_screen at fit_screen with fade
+    #Chat panel appears, showing player icon above chatbox
+    show player_icon at player_icon_position 
+
+    #Cutscene narration 
+    "You are at your desk, preparing for your first day at CLEAR."
+    "CLEAR - The Content Legitimacy & Evidence Assessment Registry."
+    "Here you believe you can make a difference. That's why you've worked this hard. There's too much fake news around lately."
+    "It really takes a toll on people. Including you; what news outlets can you trust nowadays?"
     
-     # Cutscene narration - player just reads/watches
-    "The screen flickers to life."
-    ""
     
     # Pause for atmosphere before CONTROL appears
     pause 1.5
@@ -107,7 +114,7 @@ label start:
     show control_icon at chat_panel_position with dissolve
 
     control "Welcome Intern."
-    control "Let's see how well you go."
+    control "The name's Mike, I'm here to look after you for the time being So don't disappoint us. No pressure." 
 
     return
 
