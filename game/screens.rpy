@@ -145,7 +145,7 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
-    background Solid("#4047491a")
+    background Solid("#4047495A") #50% opacity
     padding gui.namebox_borders.padding
 
 style say_label:
