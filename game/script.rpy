@@ -80,14 +80,26 @@ screen name_input_screen():
             value VariableInputValue("player_name")
             length 20 
             pixel_width 300
+            #Pressing ENTER triggers same action as clicking CONFIRM
+            action [
+                SetVariable("player_name", player_name.strip()),
+                Jump("scene_two")
+            ]
 
-        textbutton "Is this true?":
+        #Only shows button once player has typed something
+        showif player-name.strip() !=="":
+        textbutton "CONFIRM?":
             action [
                 SetVariable("player_name", player_name.strip()), #Saves type name into player_name
                 Jump("scene_two")
             ]
-            sensitive player_name.strip() != "" # Keeps the button greyed out and unclickable until the player has typed something
-
+            at transform:
+                alpha 0.0
+                linear 0.8 alpha 1.0
+                #Hover styling - changes colour when mouse is over it
+                text_hover_color "#343568"   # goes green on hover (matches CONTROL colour)
+                text_idle_color "#FFFFFF"    # white when not hovered
+                text_size 30
 #SCENE 1
 label start:
     scene black #Sets background just to black for scene 1
