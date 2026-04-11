@@ -36,7 +36,7 @@
 image welcome_back_screen = "images/Iteration_1/placeholder/Welcome_back.png"
 image control_icon = "images/Iteration_1/control_icon.png"
 image player_icon = "images/Iteration_1/player_icon.png"
-
+image actions_consequences = "images/Iteration_1/placeholder/actions_consequences_screen.png"
 
 #Image scaling definitions 
 transform fit_screen:
@@ -130,10 +130,13 @@ label scene_two:
 
     player "Uh, sure, sir. Thanks for having me."
     
-    Jump("scene_three")
+    jump scene_three
 
 #SCENE 3
 label scene_three:
     scene black with fade
 
-    "{color=#00FF00}Make the right choices, because you'll shape what's real in our society.{/color}"
+    scene actions_consequences at fit_screen with fade
+    pause 1.5
+
+    return
