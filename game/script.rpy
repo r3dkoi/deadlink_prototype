@@ -60,7 +60,7 @@ transform player_icon_position:
 
 #CHARACTER DEFINITIONS
 define control = Character("CONTROL", color="#00FF00")
-define player = DynamicCharacter("player_name", color="#343568")
+define player = DynamicCharacter("player_name", color="#0f1190")
 
 
 #Default Character Name
@@ -111,7 +111,7 @@ label scene_two:
 
     #Showing desktop background of CLEAR
     scene welcome_back_screen at fit_screen with fade
-    #Chat panel appears, showing player icon above chatbox
+    #player icon above chatbox
     show player_icon at player_icon_position 
 
     #Cutscene narration 
@@ -123,7 +123,6 @@ label scene_two:
     # Pause for atmosphere before CONTROL appears
     pause 1.5
 
-    # Chat panel appears (you'll add the image/overlay later)
     show control_icon at chat_panel_position with dissolve
 
     control "Welcome Intern."
@@ -132,3 +131,4 @@ label scene_two:
     player "Uh, sure, sir. Thanks for having me."
     return
 
+#SCENE 3
