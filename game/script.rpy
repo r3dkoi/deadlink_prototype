@@ -86,7 +86,7 @@ screen name_input_screen():
                 SetVariable("player_name", player_name.strip()), #Saves type name into player_name
                 Jump("scene_two")
             ]
-        sensitive player_name.strip() != "" # Keeps the button greyed out and unclickable until the player has typed something
+            sensitive player_name.strip() != "" # Keeps the button greyed out and unclickable until the player has typed something
 
 #SCENE 1
 label start:
