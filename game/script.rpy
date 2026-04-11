@@ -77,15 +77,15 @@ screen name_input_screen():
         text "WHAT IS YOUR NAME, INTERN?" size 30 #Text prompt for player
 
         input:
-        value VariableInputValue("player_name")
-        length 20 
-        pixel_width 300
+            value VariableInputValue("player_name")
+            length 20 
+            pixel_width 300
 
-        textbutton "Is this true?"
-        action [
-            SetVariable("player_name", player_name.strip()), #Saves type name into player_name
-            Jump("scene_two")
-        ]
+        textbutton "Is this true?":
+            action [
+                SetVariable("player_name", player_name.strip()), #Saves type name into player_name
+                Jump("scene_two")
+            ]
         sensitive player_name.strip() != "" # Keeps the button greyed out and unclickable until the player has typed something
 
 #SCENE 1
@@ -107,7 +107,6 @@ label scene_two:
     "CLEAR - The Content Legitimacy & Evidence Assessment Registry."
     "Here you believe you can make a difference. That's why you've worked this hard. There's too much fake news around lately."
     "It really takes a toll on people. Including you; what news outlets can you trust nowadays?"
-    
     
     # Pause for atmosphere before CONTROL appears
     pause 1.5
