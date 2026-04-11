@@ -99,7 +99,7 @@ screen say(who, what):
 
     window:
         id "window"
-        background Frame("images/Iteration_1/chatbox_1.png", 80, 0)
+        background Frame("images/Iteration_1/chatbox_2.png", 80, 0)
 
         if who is not None:
 
@@ -145,7 +145,7 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    background Solid("#4047491a")
     padding gui.namebox_borders.padding
 
 style say_label:
