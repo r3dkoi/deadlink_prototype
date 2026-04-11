@@ -33,7 +33,7 @@
     #return
 
 #Image definitions
-image welcome_back_screen = "images/Iteration_1/placeholder/Welcome_back_screen.png"
+image welcome_back_screen = "images/Iteration_1/placeholder/Welcome_back.png"
 image control_icon = "images/Iteration_1/control_icon.png"
 image player_icon = "images/Iteration_1/player_icon.png"
 
@@ -46,16 +46,16 @@ transform fit_screen:
     ysize config.screen_height
     fit "cover"
 
-#icon positions
+#Icon positions
 transform chat_panel_position:
     xalign 0.99        # pushes to the right
     yalign 0.05        # sits near the top
-    zoom 0.5           # scales it down to 40% of original size
+    zoom 0.35           # scales it down to 40% of original size
 
 transform player_icon_position:
     xalign 0.01 #far left 
     yalign 0.85 #near bottom 
-    zoom 0.5
+    zoom 0.35
 
 
 #CHARACTER DEFINITIONS
@@ -129,5 +129,6 @@ label scene_two:
     control "Welcome Intern."
     control "The name's Mike, I'm here to look after you for the time being So don't disappoint us. No pressure." 
 
+    player "Uh, sure, sir. Thanks for having me."
     return
 
