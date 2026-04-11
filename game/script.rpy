@@ -129,6 +129,11 @@ label scene_two:
     control "The name's Mike, I'm here to look after you for the time being So don't disappoint us. No pressure." 
 
     player "Uh, sure, sir. Thanks for having me."
-    return
+    
+    Jump("scene_three")
 
 #SCENE 3
+label scene_three:
+    scene black with fade
+
+    "{color=#00FF00}Make the right choices, because you'll shape what's real in our society.{/color}"
