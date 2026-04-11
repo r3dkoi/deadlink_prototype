@@ -71,22 +71,22 @@ default player_name = "" ## 'default' ensures the variable exists even if the ga
 
 screen name_input_screen():
     vbox: 
-    align (0.5, 0.5)
-    spacing 20
+        align (0.5, 0.5)
+        spacing 20
 
-    text "WHAT IS YOUR NAME, INTERN?" size 30 #Text prompt for player
+        text "WHAT IS YOUR NAME, INTERN?" size 30 #Text prompt for player
 
-    input:
-    value VariableInputValue("player_name")
-    length 20 
-    pixel_width 300
+        input:
+        value VariableInputValue("player_name")
+        length 20 
+        pixel_width 300
 
-    textbutton "Is this true?"
-    action [
-        SetVariable("player_name", player_name.strip()), #Saves type name into player_name
-        Jump("scene_two")
-    ]
-    sensitive player_name.strip() != "" # Keeps the button greyed out and unclickable until the player has typed something
+        textbutton "Is this true?"
+        action [
+            SetVariable("player_name", player_name.strip()), #Saves type name into player_name
+            Jump("scene_two")
+        ]
+        sensitive player_name.strip() != "" # Keeps the button greyed out and unclickable until the player has typed something
 
 #SCENE 1
 label start:
