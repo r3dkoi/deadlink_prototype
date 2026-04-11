@@ -87,19 +87,19 @@ screen name_input_screen():
             ]
 
         #Only shows button once player has typed something
-        showif player-name.strip() !=="":
-        textbutton "CONFIRM?":
-            action [
-                SetVariable("player_name", player_name.strip()), #Saves type name into player_name
-                Jump("scene_two")
-            ]
-            at transform:
-                alpha 0.0
-                linear 0.8 alpha 1.0
+        showif player_name.strip() !="":
+            textbutton "CONFIRM?":
+                action [
+                    SetVariable("player_name", player_name.strip()), #Saves type name into player_name
+                    Jump("scene_two")
+                ]
                 #Hover styling - changes colour when mouse is over it
                 text_hover_color "#343568"   # goes green on hover (matches CONTROL colour)
                 text_idle_color "#FFFFFF"    # white when not hovered
                 text_size 30
+                at transform:
+                    alpha 0.0
+                    linear 0.8 alpha 1.0
 #SCENE 1
 label start:
     scene black #Sets background just to black for scene 1
