@@ -46,6 +46,12 @@ image plain_homepage = "images/Iteration_1/placeholder/plain_desktop_screen.png"
 image organisation_icon = "images/Iteration_1/organisation_icon.png"
 image organisation_scene = "images/Iteration_1/placeholder/organisation_solo_screen.png"
 image CLEAR_archives = Movie(play="images/Iteration_1/placeholder/scrolling_website.webm")
+image the_removed = "images/Iteration_1/placeholder/the_removed.png"
+image the_choice = "images/Iteration_1/placeholder/the_choice.png"
+image bad_end_start = "images/Iteration_1/placeholder/bad_end_start.png"
+image good_end_start = "images/Iteration_1/placeholder/good_end_start.png"
+image end_demo = Movie(play="images/Iteration_1/end_demo_screen.webm")
+
 
 #Image scaling definitions 
 transform fit_screen:
@@ -268,8 +274,68 @@ label scene_seven:
 
     player "And he's gone. Alright, let's get to it then."
 
+jump scrolling_thru_CLEAR_archives
+
 #TRANSITION 8
 label scrolling_thru_CLEAR_archives:
+    scene CLEAR_archives at fit_screen with fade
 
+    "You spent some time scrolling through the archives."
+
+    show player_icon at player_icon_position with dissolve
+    player "Ah, so this is where the removed media go."
+    hide player_icon with dissolve
+
+    "There's plenty of media you've never seen before! But some you do."
+    "And the ones that you do recognise are the ones that worry you."
+
+#SCENE  8
+label scene_eight:
+    scene the_removed at fit_screen with fade
+
+    show player_icon at player_icon_position 
+    player "Wait...I stamped this one with misinformation a few days back, why is it saying it's still in the information systems?"
+    player "The ones that I marked true are removed? What's going on?"
+
+    scene the_choice at fit_screen
+    player "Wait this article...it's about CLEAR."
+    player "The Registry That Decides What's Real — And What Isn't."
+
+    menu:
+        "Remove":
+            jump bad_end_start
+        "Keep in the system":
+            jump good_end_start
+
+#Bad End Start
+label bad_end_start:
+    scene bad_end_start at fit_screen with fade
+    show player_icon at player_icon_position 
+    player "I mean, what we are doing IS real. We're trying to get rid of the false things. Aren't we?"
+
+    show control_icon at chat_panel_position with dissolve
+    control "Good catch, [player_name]. You always knew the right answers after all."
+
+    jump end_demo
+
+#Good End Start
+label good_end_start:
+    scene good_end_start at fit_screen with fade
+    show player_icon at player_icon_position 
+    player "..."
+
+    show control_icon at chat_panel_position with dissolve
+    control "Hey, you've been having a good track record up until now. This is exactly the kind of thinking they want you to believe."
+    control "Don't start disappointing us now."
+
+    jump end_demo
+
+#End Demo screen
+label end_demo:
+    scene end_demo at fit_screen with fade
+
+    pause 5.0
+
+    return
 
         
