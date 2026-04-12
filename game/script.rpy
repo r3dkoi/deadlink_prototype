@@ -44,6 +44,7 @@ image wrong_answer2 = "images/Iteration_1/placeholder/wrong_answer_2.png"
 image the_doubt1 = "images/Iteration_1/placeholder/the_doubt_1.png"
 image plain_homepage = "images/Iteration_1/placeholder/plain_desktop_screen.png"
 image organisation_icon = "images/Iteration_1/organisation_icon.png"
+image organisation_scene = "images/Iteration_1/placeholder/organisation_solo_screen.png"
 
 #Image scaling definitions 
 transform fit_screen:
@@ -249,13 +250,15 @@ label scene_seven:
     control "And my name's Mike but I'm Control here; it's more convenient to remember what position you are than names anyway."
     control "But I'm not here to dawdle, intern, I got good news."
     
-    scene organisation_icon at fit_screen with fade
+    scene organisation_scene at fit_screen with fade
 
     control "The upstairs have granted you access to our Archives."
 
     pause 2.0
 
-    scene scene plain_homepage at fit_screen with fade
+    scene plain_homepage at fit_screen with fade
+    show player_icon at player_icon_position 
+    show control_icon at chat_panel_position
     control "Enjoy the priviledge, we got high hopes for you." 
 
     player "Oh, wow, thanks. I really appreciate--"
