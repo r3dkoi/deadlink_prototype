@@ -133,7 +133,7 @@ label scene_two:
     show control_icon at chat_panel_position with dissolve
 
     control "Welcome Intern."
-    control "The name's Mike but while we're on the job, I'm Control. I'm here to look after you for the time being So don't disappoint us. No pressure." 
+    control "The name's Mike but while we're on the job, I'm Control. I'm here to look after you for the time being so don't disappoint us. No pressure." 
 
     player "Uh, sure, sir. Thanks for having me."
     
@@ -212,7 +212,7 @@ label right_answer:
     show control_icon at chat_panel_position with dissolve
     control "Nicely done. Keep that up and we'll be keeping our society well informed."
 
-return
+
 #SCENE 5 Time Passes
 label scene_five:
     scene black
@@ -234,12 +234,7 @@ label scene_six:
 
     player "If it's on here, I still got a job to do..."
 
-    menu:
-        "Remove":
-            jump scene_seven
-        
-        "Keep in the system" if False:
-            return
+    call screen article_choice #Made in screens.rpy 
 
 #SCENE 7
 label scene_seven:
