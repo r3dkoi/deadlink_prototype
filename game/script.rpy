@@ -45,6 +45,7 @@ image the_doubt1 = "images/Iteration_1/placeholder/the_doubt_1.png"
 image plain_homepage = "images/Iteration_1/placeholder/plain_desktop_screen.png"
 image organisation_icon = "images/Iteration_1/organisation_icon.png"
 image organisation_scene = "images/Iteration_1/placeholder/organisation_solo_screen.png"
+image CLEAR_archives = Movie(play="images/Iteration_1/placeholder/scrolling_website.webm")
 
 #Image scaling definitions 
 transform fit_screen:
@@ -267,6 +268,8 @@ label scene_seven:
 
     player "And he's gone. Alright, let's get to it then."
 
-    return
+#TRANSITION 8
+label scrolling_thru_CLEAR_archives:
+
 
         
