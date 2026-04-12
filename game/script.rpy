@@ -41,6 +41,7 @@ image tutorial_1 = "images/Iteration_1/placeholder/tutorial_1.png"
 image tutorial_2 = "images/Iteration_1/placeholder/tutorial_2.png"
 image wrong_answer1 = "images/Iteration_1/placeholder/wrong_answer_1.png"
 image wrong_answer2 = "images/Iteration_1/placeholder/wrong_answer_2.png"
+image the_doubt1 = "images/Iteration_1/placeholder/the_doubt_1.png"
 
 #Image scaling definitions 
 transform fit_screen:
@@ -138,12 +139,12 @@ label scene_two:
 
 #SCENE 3
 label scene_three:
-    scene black with fade
+    scene black 
 
     scene actions_consequences at fit_screen with fade
     pause 2.0
 
-    return
+    
 
 #SCENE 4
 label scene_four:
@@ -153,12 +154,12 @@ label scene_four:
     control "Alright, let's get this onboarding out of the way."
     control "You'll be scouring through posts, articles, and any form of media within our organisation's website."
     
-    scene tutorial_2 at fit_screen with fade
+    scene tutorial_2 at fit_screen
     control "Using that noggin of yours, you gotta piece together which media is true and which ones aren't."
     control "Most of them are real obvious. Stamping one with a circle means it's misinformation. You found the fake news and it gets removed from the public."
     control "Stamping them with an X means they're true, so they'll stay in the information systems. The public sees these news so it's imperative you choose the right one."
 
-    scene scene tutorial_1 at fit_screen with fade
+    scene tutorial_1 at fit_screen
     control "Go ahead and give it a try."
 
     menu:
@@ -167,20 +168,22 @@ label scene_four:
         "Article 2":
             jump right_answer
         "Article 3":
-            jump wrong answer_2
+            jump wrong_answer_2
 
 #SCENE 4 but just with tutorial
 label tutorial_scene:
     scene tutorial_1 at fit_screen with fade
-    "Article 1":
+
+    menu:
+        "Article 1":
             jump wrong_answer_1
         "Article 2":
             jump right_answer
         "Article 3":
-            jump wrong answer_2
+            jump wrong_answer_2
 
 #Wrong Answer 1 SCENE
-label wrong_answer_1
+label wrong_answer_1:
 
     scene wrong_answer1 at fit_screen with fade
     pause 1.5
@@ -191,7 +194,7 @@ label wrong_answer_1
     jump tutorial_scene
 
 #Wrong Answer 2 SCENE
-label wrong_answer_2
+label wrong_answer_2:
 
     scene wrong_answer2 at fit_screen with fade
     show control_icon at chat_panel_position with dissolve
@@ -200,11 +203,22 @@ label wrong_answer_2
     jump tutorial_scene
 
 #Right Answer SCENE
-label right_answer
+label right_answer:
 
     scene tutorial_2 at fit_screen with fade
 
     show control_icon at chat_panel_position with dissolve
     control "Nicely done. Keep that up and we'll be keeping our society well informed."
 
+return
 #SCENE 5 Time Passes
+label scene_five:
+    scene black
+
+    #narration
+    "It's been a few days on the job."
+    "You believe you've been doing well. You still believe you're making a difference."
+    jump scene_six
+#SCENE 6
+label scene_six:
+    
