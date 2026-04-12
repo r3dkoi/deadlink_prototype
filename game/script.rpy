@@ -51,6 +51,7 @@ image the_choice = "images/Iteration_1/placeholder/the_choice.png"
 image bad_end_start = "images/Iteration_1/placeholder/bad_end_start.png"
 image good_end_start = "images/Iteration_1/placeholder/good_end_start.png"
 image end_demo = Movie(play="images/Iteration_1/end_demo_screen.webm")
+image transition = Movie(play="images/Iteration_1/transition.webm")
 
 
 #Image scaling definitions 
