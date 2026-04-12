@@ -1633,3 +1633,16 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+# Custom article_choice screen adjustment
+screen article_choice():
+    vbox:
+        align (0.5, 0.5)
+        spacing 20
+
+        textbutton "Remove":
+            action Jump("scene_seven")
+
+        textbutton "Keep in the system":
+            sensitive False
+            text_idle_color "#888888"
