@@ -221,4 +221,25 @@ label scene_five:
     jump scene_six
 #SCENE 6
 label scene_six:
-    
+    scene the_doubt1 at fit_screen with fade
+
+    show player_icon at player_icon_position 
+    player "Huh, this post..."
+    player "The stuff they're missing sounds like the things I've approved for removal in the information systems."
+    player "I guess there's gotta be backlash everywhere, but was it really integral to that university?"
+
+    pause 1.5
+
+    player "If it's on here, I still got a job to do..."
+
+    menu:
+        "Remove":
+            jump scene_seven
+        
+        "Keep in the system" if False:
+            return
+
+#SCENE 7
+label scene_seven:
+    scene 
+        

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 362: '(' was never closed
-    add Movie(
-             ^
+File "game/script.rpy", line 170: end of line expected.
+    jump wrong answer_2
+               ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Fri Apr 10 18:24:45 2026
+Sat Apr 11 14:24:09 2026
