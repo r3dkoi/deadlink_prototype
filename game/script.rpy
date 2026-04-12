@@ -42,6 +42,8 @@ image tutorial_2 = "images/Iteration_1/placeholder/tutorial_2.png"
 image wrong_answer1 = "images/Iteration_1/placeholder/wrong_answer_1.png"
 image wrong_answer2 = "images/Iteration_1/placeholder/wrong_answer_2.png"
 image the_doubt1 = "images/Iteration_1/placeholder/the_doubt_1.png"
+image plain_homepage = "images/Iteration_1/placeholder/plain_desktop_screen.png"
+image organisation_icon = "images/Iteration_1/organisation_icon.png"
 
 #Image scaling definitions 
 transform fit_screen:
@@ -241,5 +243,32 @@ label scene_six:
 
 #SCENE 7
 label scene_seven:
-    scene 
+    scene plain_homepage at fit_screen
+
+    show control_icon at chat_panel_position with dissolve
+    control "You've been doing pretty well, intern."
+    
+    show player_icon at player_icon_position 
+    player "You know my name is [player_name], right? How long have I been here--"
+
+    control "And my name's Mike but I'm Control here; it's more convenient to remember what position you are than names anyway."
+    control "But I'm not here to dawdle, intern, I got good news."
+    
+    scene organisation_icon at fit_screen with fade
+
+    control "The upstairs have granted you access to our Archives."
+
+    pause 2.0
+
+    scene scene plain_homepage at fit_screen with fade
+    control "Enjoy the priviledge, we got high hopes for you." 
+
+    player "Oh, wow, thanks. I really appreciate--"
+
+    hide control_icon with dissolve
+
+    player "And he's gone. Alright, let's get to it then."
+
+    return
+
         
