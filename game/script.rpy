@@ -33,7 +33,7 @@
     #return
 
 #Image definitions
-image welcome_back_screen = "images/Iteration_1/placeholder/Welcome_back.png"
+image welcome_back_screen = "images/Iteration_1/Welcome_back.png"
 image control_icon = "images/Iteration_1/control_icon.png"
 image player_icon = "images/Iteration_1/player_icon.png"
 image actions_consequences = "images/Iteration_1/placeholder/actions_consequences_screen.png"
@@ -224,12 +224,13 @@ label right_answer:
 
 #SCENE 5 Time Passes
 label scene_five:
-    scene black
+    scene transition at fit_screen with fade
 
     #narration
     "It's been a few days on the job."
     "You believe you've been doing well. You still believe you're making a difference."
     jump scene_six
+    
 #SCENE 6
 label scene_six:
     scene the_doubt1 at fit_screen with fade

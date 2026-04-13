@@ -262,7 +262,7 @@ screen quick_menu():
                 textbutton _("Q.Save") action QuickSave()
                 textbutton _("Q.Load") action QuickLoad()
                 textbutton _("Prefs") action ShowMenu('preferences')
-  
+
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -328,7 +328,7 @@ screen navigation():
         # Replay controls - only shown during a replay
         if _in_replay:
             textbutton _("[[ END REPLAY ]]") action EndReplay(confirm=True)
-        
+
         # About and Help hidden intentionally
             # textbutton _("About") action ShowMenu("about")
             # textbutton _("Help") action ShowMenu("help")
