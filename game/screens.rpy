@@ -487,7 +487,8 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
                     transclude
 
-    use navigation
+    if not main_menu:
+        use navigation
 
     textbutton _("Return"):
         style "return_button"
@@ -1636,9 +1637,11 @@ style slider_slider:
 
 # Custom article_choice screen adjustment
 screen article_choice():
+    style_prefix "choice"
+
     vbox:
         align (0.5, 0.5)
-        spacing 20
+        spacing gui.choice_spacing
 
         textbutton "Remove":
             action Jump("scene_seven")
@@ -1646,3 +1649,5 @@ screen article_choice():
         textbutton "Keep in the system":
             sensitive False
             text_idle_color "#888888"
+
+
